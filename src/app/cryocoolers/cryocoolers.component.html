@@ -1,22 +1,14 @@
 <div class="cryocoolers">
     <div class="container mx-auto py-5">
-        <div class="row px-lg-5">
-            <div class="col-lg-3 mt-lg--5 pt-lg-5">
-                <h1 class="py-4">CRYOCOOLERS</h1>
+        <div class="row px-lg-5" *ngFor="let data of allCrocoolersList">
+            <div class="col-lg-3 mt-lg--5 pt-lg-5" *ngIf="data.title === 'CRYOCOOLERS'">
+                <h1 class="py-4">{{data.title}}</h1>
                 <i class="fa-solid fa-cloud fa-5x px-5"></i>
             </div>
-            <div class="col-lg-9">
-                <p class="fs-5 mx-lg-5">Cryogenic refrigeration is achieved through different types of cryocoolers.
-                    Depending on the end application, cryocoolers are classified as Stirling, Gifford-McMahon (G-M),
-                    Joule-Thomson (J-T) and Pulse Tube Cryocoolers.</p> <br>
-                <p class="fs-5 mx-lg-5">Onnes Cryocoolers are highly efficient, reliable with proven efficacy that meets
-                    the end client’s strategic performance requirements. Onnes is a market leader in Joule-Thomson,
-                    Stirling Cycle, and Pulse Tube Cryocoolers. Our cryocoolers are used in demanding harsh conditions
-                    of defense, military, and space applications. Onnes constantly innovates to push the technological
-                    limits of cryocoolers to make them suited for the macroscopic and miniature applications on the
-                    ground, space, and water.</p>
+            <div class="col-lg-9" *ngIf="data.title === 'CRYOCOOLERS'">
+                <p class="fs-5 mx-lg-5">{{data.content}}</p>
             </div>
-            <p class="text-end fw-bold">Design concept: Sujith Vijayan</p>
+            <p *ngIf="data.title === 'CRYOCOOLERS'" class="text-end fw-bold">Design concept: Sujith Vijayan</p>
         </div>
     </div>
 </div>

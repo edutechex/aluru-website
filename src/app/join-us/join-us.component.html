@@ -1,10 +1,8 @@
 <div class="join-us">
-    <div class="container mx-auto py-5">
+    <div class="container mx-auto py-5" *ngFor="let join of allJoinUsList">
         <h1 class="fw-bold text-white mt-lg-5">JOIN US</h1>
         <hr>
-        <p class="text-start text-white col col-lg-6 mt-lg-5">Join us for an exciting career in the field of cryogenics. At, Onnes we are always open to embrace
-            like-minded people to work on the most exciting ultra-cool projects. Get in touch with
-            us to be part of an innovative global cryogenics company.</p>
-            <p class="fs-5 text-white mb-lg-5">Email at : <span class="fw-bold">careers.onnes@gmail.com</span></p>
+        <p class="text-start text-white col col-lg-6 mt-lg-5">{{join.content}}</p>
+            <p class="fs-5 text-white mb-lg-5">Email at : <span class="fw-bold"> careers.onnes@gmail.com </span> </p>
     </div>
 </div>

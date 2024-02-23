@@ -34,40 +34,31 @@
                     <a class="nav-link " routerLink="/home" fragment="" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Home</a>
                 </li>
                 <li class="nav-item d-none d-lg-block">
-                    <a class="nav-link" [routerLink]="'home'" fragment="about">About Us</a>
+                    <a class="nav-link"  [routerLink]="'home'" fragment="about">About Us</a>
                 </li>
                 <li class="nav-item d-lg-none">
                     <a class="nav-link" [routerLink]="'home'" fragment="about" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">About Us</a>
                 </li>
-                <li class="nav-item dropdown d-none d-lg-block">
-                    <a class="nav-link dropdown-toggle " routerLink="" id="demoMenu" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Team</a>
-                    <ul class="dropdown-menu" aria-labelledby="demoMenu">
-                        <li> <a class="dropdown-item" [routerLink]="'home'" fragment="founder">Founders</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">Team</a>
+                    <ul class="dropdown-menu"  aria-labelledby="demoMenu">
+                        <!-- Dropdown submenu -->
+                        <li class="dropdown-submenu dropend" *ngFor="let data of allnavItemList">
+                            <a class="dropdown-item d-none d-lg-block " *ngIf="data.navbarName === 'Team'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="dropdown" aria-expanded="false">{{data?.navbarSubName}}</a>
+                            <a class="dropdown-item d-lg-none " *ngIf="data.navbarName === 'Team'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" >{{data?.navbarSubName}}</a>
+                        </li>
                     </ul>
                 </li>
-                <li class="nav-item btn-group d-lg-none">
-                      <a class="nav-link dropdown-toggle " routerLink="" id="demoMenu" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Team</a>
-                      <ul class="dropdown-menu">
-                          <li> <a class="dropdown-item" [routerLink]="'home'" fragment="founder" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Founders</a></li>
-                      </ul>
-
-                </li>
-                <li class="nav-item dropdown d-none d-lg-block">
-                    <a class="nav-link dropdown-toggle " routerLink="" id="demoMenu" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Offerings</a>
-                    <ul class="dropdown-menu" aria-labelledby="demoMenu">
-                        <li> <a class="dropdown-item " [routerLink]="'home'" fragment="technology">Technology</a></li>
-                        <li> <a class="dropdown-item " [routerLink]="'home'" fragment="cryocoolers">Cryocoolers</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item btn-group d-lg-none">
-                    <a class="nav-link dropdown-toggle " routerLink="" id="demoMenu" data-bs-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Offerings</a>
-                    <ul class="dropdown-menu" aria-labelledby="demoMenu">
-                        <li> <a class="dropdown-item " [routerLink]="'home'" fragment="technology" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Technology</a></li>
-                        <li> <a class="dropdown-item " [routerLink]="'home'" fragment="cryocoolers" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Cryocoolers</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"  id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="cursor: pointer;">Offerings</a>
+                    <ul class="dropdown-menu"  aria-labelledby="demoMenu">
+                        <!-- Dropdown submenu -->
+                        <li class="dropdown-submenu dropend" *ngFor="let data of allnavItemList">
+                            <!-- <a class="dropdown-item d-none d-lg-block " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="dropdown" aria-expanded="false">{{data?.navbarSubName}}</a>
+                            <a class="dropdown-item d-lg-none " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'home'" [fragment]="data.routerLink" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" >{{data?.navbarSubName}}</a> -->
+                            <a class="dropdown-item d-none d-lg-block " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'offering'" [fragment]="data.routerLink" >{{data?.navbarSubName}}</a>
+                            <a class="dropdown-item d-lg-none " *ngIf="data.navbarName === 'Offerings'" [routerLink]="'offering'" [fragment]="data.routerLink" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" >{{data?.navbarSubName}}</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item d-none d-lg-block">

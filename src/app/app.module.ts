@@ -16,6 +16,8 @@ import { JoinUsComponent } from './join-us/join-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { OfferingComponent } from './offering/offering.component';
+import { CfrpVesselsComponent } from './offering/cfrp-vessels/cfrp-vessels.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     CryocoolersComponent,
     BlogNewsComponent,
     JoinUsComponent,
-    ContactComponent
+    ContactComponent,
+    OfferingComponent,
+    CfrpVesselsComponent
   ],
   imports: [
     BrowserModule,

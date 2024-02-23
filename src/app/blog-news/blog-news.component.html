@@ -3,32 +3,12 @@
         <h1 class="fw-bold">BLOG & NEWS</h1>
         <hr>
         <div class="row mx-lg-5 py-lg-5 ps-lg-5 ps-3">
-            <div class="col-lg-4 col-sm-6">
-                <a class="text-decoration-none" href="https://www.nist.gov/news-events/news/2017/05/no-liquid-helium-still-extremely-cool" target="_blank">
+            <div class="col-lg-4 col-sm-6" *ngFor="let blog of allBlogNewsData">
+                <a class="text-decoration-none" [href]="blog.link" target="_blank">
                     <div class="card border-0" style="width: 20rem;">
-                        <img src="assets/images/cryocooler.jpg" class="card-img-top" alt="...">
+                        <img [src]="blog.image" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title text-center fw-bold">No Liquid Helium, But Still Extremely Cool</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="text-decoration-none" href="https://phys.org/news/2013-01-electronics-cold-cryocooler.html" target="_blank">
-                    <div class="card border-0" style="width: 20rem;">
-                        <img src="assets/images/light-bulb.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-center fw-bold">Electronics like it cold, and 30 K cryocooler delivers</h5>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="text-decoration-none" href="https://www.flightglobal.com/lockheed-prepping-advanced-eots-and-legion-pod-for-flight-tests/119918.article" target="_blank">
-                    <div class="card border-0" style="width: 20rem;">
-                        <img src="assets/images/aircraft-plane.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title text-center fw-bold">Prepping Advanced EOTS for flight tests</h5>
+                            <h5 class="card-title text-center fw-bold">{{blog.content}}</h5>
                         </div>
                     </div>
                 </a>

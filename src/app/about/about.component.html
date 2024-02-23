@@ -1,17 +1,12 @@
 <div class="about-section">
-    <div class="row container mx-auto  px-lg-5" style="padding: 70px 0;">
+    <div class="row container mx-auto  px-lg-5" style="padding: 70px 0;" *ngFor="let about of allAboutUsList">
         <div class="col-lg-3 ">
             <h1 class="fw-bold">ABOUT US</h1>
             <hr>
-            <img src="assets/images/Image-7.jpg" alt="">
+            <img [src]="about.image" alt="">
         </div>
         <div class="col-lg-9">
-            <p class="mt-4 fs-5 mx-lg-5">The team at Onnes comprises of the best talented Scientists and Engineers who are motivated and committed
-                to build world-class cryogenic products. Onnes is founded with the core principle to become a world
-                leader in cryocooler technology. The goal of Onnes is to design and manufacture a wide range of
-                cryocoolers for space, military, defense, and commercial industries. Onnes Cryogenics conducts
-                cutting-edge research to advance cryocooler technology adaptable to the harshest and rugged
-                environmental conditions addressing the strategic needs of our customers.</p>
+            <p class="mt-4 fs-5 mx-lg-5">{{about.content}}</p>
         </div>
     </div>
 </div>

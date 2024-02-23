@@ -2,37 +2,15 @@
     <div class="container mx-auto py-5">
         <h1 class="fw-bold">TEAM - FOUNDERS</h1>
         <hr>
-        <div class="row mx-lg-5 py-lg-5">
-            <div class="col-lg-6">
-                <h1>Dr. Ram K Aluru</h1>
-                <h5>Co-Founder & CEO</h5>
-                <p class="py-4">Ram’s background is in low-temperature physics and quantum material science engineering, he holds a
-                    Ph.D.
-                    from the Max Planck Institute, Germany and Uni. St Andrews, UK for working on high-temperature
-                    superconductors and semiconductor electronics at cryogenic temperatures such as 1.6 K and 30 mK.
-                    After
-                    his Ph.D., Ram worked as a Research Scientist at the Leiden Institute of Physics in the Netherlands.
-                    Apart from having the tech edge in cryogenics and superconducting electronics, Ram also built an
-                    EdTech
-                    company from scratch and managed Bluetooth technology projects in Industry 4.0. During his doctoral
-                    studies, Ram has published his research findings in prestigious journals such as Science, Nature and
-                    he
-                    is an avid science communicator and takes an active part in science outreach activities.</p>
-                <div>
-                    <a href="https://www.linkedin.com/in/dr-ram-k-aluru-77608a3b/" target="_blank" style="color: rgb(148, 142, 142);"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+        <div class="row mx-lg-5 py-lg-5" >
+            <div class="col-lg-6" *ngFor="let team of allTeamList">
+                <div class=" mb-3">
+                    <img class="avatar-img rounded-circle border border-1" [src]="team.image" alt="avatar" style="width: 200px; height: 200px;">
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <h1>Dr. Vikram S Raghavan</h1>
-                <h5>Co-Founder & CTO</h5>
-                <p class="py-4">VIKRAM has a background in Applied Physics and Instrumentation with 10 yrs. of R&D and 4 yrs. of
-                    Industry experience in the polymer sector. He has good experience in Materials science and
-                    specifically in Nanotechnology. He published 10 papers and has 4 patents in the area of
-                    Nanomaterials. He has deep insights into design, fabrication, and quality assurance that will be
-                    very useful to build efficient cryocoolers.</p>
-                <div>
-                   <a href="https://www.linkedin.com/in/vikram-srinivasa-raghavan-ph-d-5293481a3/" target="_blank" style="color: rgb(148, 142, 142);"><i class="fa-brands fa-linkedin fa-2x"></i></a> 
-                </div>
+                <h1>{{team.name}}</h1>
+                <h5>{{team.designation}}</h5>
+                <p class="py-4">{{team.about}}</p>
+                <a [href]="team.link" target="_blank" style="color: rgb(148, 142, 142);"><i class="fa-brands fa-linkedin fa-2x"></i></a>
             </div>
         </div>
     </div>

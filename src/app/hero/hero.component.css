@@ -6,6 +6,11 @@
     top: 60%;
     transform: translateY(-50%);
 }
+.carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
 @media(max-width:768px) {
     .carousel-inner img{
         width: 100%;
