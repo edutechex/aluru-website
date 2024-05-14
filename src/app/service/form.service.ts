@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class FormService {
 
- baseUrl = "https://api.onnes.in/api";
+ baseUrl = "https://api.alurus.in/api";
 
   constructor(private http: HttpClient) { }
 
@@ -53,5 +53,15 @@ export class FormService {
   //get cfrp content
   getCfrpData(): Observable<any>{
     return this.http.get<any>(`${this.baseUrl}/Offoring_CFRP`);
+  }
+
+  //get visitors data
+  getvisitorsDetaials(){
+    return this.http.get('https://ipapi.co/json');
+  }
+
+  //add visitors
+  addVisitorsDetail(visitor: any){
+    return this.http.post(`${this.baseUrl}/Visitors`,visitor);
   }
 }

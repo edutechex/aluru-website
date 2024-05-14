@@ -7,10 +7,13 @@
 .navbar-nav .nav-item a {
     cursor: pointer;
 }
+a{
+    cursor: pointer;
+}
 @media(max-width:768px){
     .navbar-brand img{
         width: 100px;
-        height: 33px;
+        height: 42px;
         margin-left: 10px;
     }
 }

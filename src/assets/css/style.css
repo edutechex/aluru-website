@@ -792,7 +792,7 @@ address {
     z-index: 1100 !important;
   }
   .navbar-expand-md .navbar-brand .navbar-brand-item {
-    height: 36px;
+    height: 42px;
     display: block;
     width: auto;
   }
@@ -1168,7 +1168,7 @@ address {
     z-index: 1100 !important;
   }
   .navbar-expand-xl .navbar-brand .navbar-brand-item {
-    height: 36px;
+    height: 60px;
     display: block;
     width: auto;
   }

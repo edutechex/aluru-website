@@ -5,13 +5,16 @@
     padding: 0 10px;
 }
 h1{
-    color: #1B75BC;
+    color: #1b8596;
 }
 hr{
     width: 150px;
     height: 3px;
-    color: #1B75BC;
+    color: #1b8596;
 }
 .social i{
-    color: #1B75BC;
+    color: #1b8596;
+}
+a{
+    cursor: pointer;
 }
