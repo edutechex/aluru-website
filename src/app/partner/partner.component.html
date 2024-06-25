@@ -1,0 +1,32 @@
+<div class="partners" *ngIf="partnerData.length > 0">
+    <div class="container mx-auto py-5 ">
+      <h1 class="fw-bold">Partners</h1>
+      <hr>
+      <div class="container">
+        <div class="d-none d-lg-block">
+          <div class="row align-items-center">
+            <swiper-container class=" swiper-container d-none d-lg-block" loop="true" slides-per-view="3" space-between="15" autoplay-delay="2500">
+              <swiper-slide *ngFor="let item of partnerData">
+                <a [href]="item.link" target="_blank">
+                  <img [src]="item.image" alt="" class="d-block fixed-size">
+                  <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+              </a>
+              </swiper-slide>
+            </swiper-container>
+  
+          </div>
+        </div>
+        <div class="d-lg-none">
+          <swiper-container class=" swiper-container" loop="true" navigation="true"
+              pagination="true" pagination-clickable="true" slides-per-view="1" space-between="15" autoplay-delay="2500">
+              <swiper-slide *ngFor="let item of partnerData">
+                <a [href]="item.link" target="_blank">
+                  <img [src]="item.image" alt="" class="d-block fixed-size">
+                  <h5 class="fw-bold  mt-3 ms-5">{{item.title}}</h5>
+              </a>
+              </swiper-slide>
+            </swiper-container>
+        </div>
+      </div>
+    </div>
+  </div>

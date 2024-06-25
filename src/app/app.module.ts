@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { OfferingComponent } from './offering/offering.component';
 import { CfrpVesselsComponent } from './offering/cfrp-vessels/cfrp-vessels.component';
+import { PartnerComponent } from './partner/partner.component';
+import { InvestrosComponent } from './investros/investros.component';
+import { AdvisoryComponent } from './advisory/advisory.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { CfrpVesselsComponent } from './offering/cfrp-vessels/cfrp-vessels.compo
     JoinUsComponent,
     ContactComponent,
     OfferingComponent,
-    CfrpVesselsComponent
+    CfrpVesselsComponent,
+    PartnerComponent,
+    InvestrosComponent,
+    AdvisoryComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +48,10 @@ import { CfrpVesselsComponent } from './offering/cfrp-vessels/cfrp-vessels.compo
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+  ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
   providers: [],
   bootstrap: [AppComponent]

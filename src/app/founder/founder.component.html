@@ -9,7 +9,21 @@
                 </div>
                 <h1>{{team.name}}</h1>
                 <h5>{{team.designation}}</h5>
-                <p class="py-4">{{team.about}}</p>
+                <div class="description-container">
+                    <p class="py-4">
+                        <ng-container *ngIf="!team.showFullDescription; else fullDescription">
+                            {{ team.about | slice:0:200 }}
+                        </ng-container>
+                        <ng-template #fullDescription>
+                            {{ team.about }}
+                        </ng-template>
+                        <span *ngIf="team.about.length > 100">
+                            <span (click)="toggleDescription(team)" style="cursor: pointer; color: blue;">
+                                {{ team.showFullDescription ? 'View Less' : '....View More' }}
+                            </span>
+                        </span>
+                    </p>
+                </div>
                 <a [href]="team.link" target="_blank" style="color: rgb(148, 142, 142);"><i class="fa-brands fa-linkedin fa-2x"></i></a>
             </div>
         </div>

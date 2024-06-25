@@ -61,6 +61,12 @@
                         </li>
                     </ul>
                 </li>
+                <li class="nav-item d-none d-lg-block" *ngIf="partnerData.length > 0">
+                    <a class="nav-link"  [routerLink]="'home'" fragment="partners">Partners</a>
+                </li>
+                <li class="nav-item  d-lg-none" *ngIf="partnerData.length > 0">
+                    <a class="nav-link" [routerLink]="'home'" fragment="partners" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false">Partners</a>
+                </li>
                 <li class="nav-item d-none d-lg-block">
                     <a class="nav-link" [routerLink]="'home'" fragment="blog-news">Blog & News</a>
                 </li>

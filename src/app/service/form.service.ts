@@ -64,4 +64,24 @@ export class FormService {
   addVisitorsDetail(visitor: any){
     return this.http.post(`${this.baseUrl}/Visitors`,visitor);
   }
+
+  //get Partner
+  getPartner(){
+    return this.http.get(`${this.baseUrl}/Partner`);
+  }
+
+   //get LetsTalk
+   getLetsTalk(){
+    return this.http.get(`${this.baseUrl}/Let_sTalk`);
+  }
+
+  //ger Advisor
+  getAdvisor(): Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/Advisory`);
+  }
+
+  // get Investor
+  getInvestor(){
+    return this.http.get(`${this.baseUrl}/Investors`);
+  }
 }

@@ -16,12 +16,15 @@ export class FounderComponent implements OnInit{
   }
   getTeamData(){
     this.formService.getTeam().subscribe({
-      next:(res)=>{
-        this.allTeamList = res;
+      next: (res) => {
+        this.allTeamList = res.map((team: any) => ({ ...team, showFullDescription: false }));
       },
-      error:(err)=>{
+      error: (err) => {
         console.log(err.message);
       }
-    })
+    });
+  }
+  toggleDescription(team: any) {
+    team.showFullDescription = !team.showFullDescription;
   }
 }

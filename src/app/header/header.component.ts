@@ -10,6 +10,7 @@ import { FormService } from '../service/form.service';
 })
 export class HeaderComponent implements OnInit{
   allnavItemList: any;
+  partnerData: any;
 
   // navBg: any;
 
@@ -38,6 +39,7 @@ export class HeaderComponent implements OnInit{
       this.jumpTo(value);
     });
     this.getNavItem();
+    this.getPartner();
   }
 
   jumpTo(section:any){
@@ -52,6 +54,11 @@ export class HeaderComponent implements OnInit{
       error:(err)=>{
         console.log(err.message);
       }
+    })
+  }
+  getPartner(){
+    this.formService.getPartner().subscribe((res:any)=>{
+      this.partnerData = res;
     })
   }
 

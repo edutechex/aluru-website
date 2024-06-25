@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit{
   contactForm: any;
   submitted: boolean = false;
   display: any;
+  letsTalkData:any[] = [];
 
   constructor(
      public fb:FormBuilder,
@@ -23,6 +24,7 @@ export class ContactComponent implements OnInit{
       email : new FormControl('',[Validators.required,Validators.pattern('[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}')]),
       comment : new FormControl('',[Validators.required]),
     })
+    this.getLetsTalk();
   }
 get g(){
   return this.contactForm.controls;
@@ -53,4 +55,9 @@ get g(){
     this.display = 'none'
   }
 
+  getLetsTalk(){
+    this.ds.getLetsTalk().subscribe((res:any)=>{
+      this.letsTalkData = res;
+    })
+  }
 }

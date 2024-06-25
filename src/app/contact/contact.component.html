@@ -4,8 +4,10 @@
             <div class="col-md-3 py-lg-5 py-4">
                 <h1 class="fw-bold">LETS TALK</h1>
                 <hr>
-                <span class="fw-bold">Alurus Cryogenics Private Limited</span>
-                <p> 91 Springboard, LVS Arcade, Plot No 71, Jubilee Enclave, Hitech City, Hyderabad – 500081</p>
+                <ng-container *ngFor="let data of letsTalkData">
+                    <span class="fw-bold">{{data.name}}</span>
+                <p> {{data.adress}}</p>
+                </ng-container>
                 <div class="social">
                     <a  class="text-decoration-none"
                         target="_blank"><i class="fa-brands fa-linkedin-in fs-6"></i></a>
